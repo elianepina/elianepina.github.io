@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <title>Currículo em HTML / CSS</title>
+	<link rel="icon" href="blue.png" type="image/png"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	    @import url('https://fonts.googleapis.com/css?family=Sarabun');
+	
+		body {margin: 0;}
+        
+		/* Navbar responsiva da w3schools */
+		ul.topnav {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #000000;
+		}
+
+		ul.topnav li {float: left;}
+
+		ul.topnav li a {
+			display: block;
+			color: #ffffff;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family: 'Sarabun', sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		ul.topnav li a:hover:not(.active) {background-color: #0062ff}
+
+		ul.topnav li a.active {background-color: #001483}
+
+		ul.topnav li.right {float: right;}
+
+		@media screen and (max-width: 600px) {
+			ul.topnav li.right, 
+			ul.topnav li {float: none;}
+		}
+		
+		/* Imagem responsiva */
+		.responsiveimg {
+			width: 100%;
+			
+			height: auto;
+		}
+		
+		/* Site Responsivo e fontes usadas do site */
+		.header {
+			padding: 0px;
+		}
+		
+		html {
+			font-family: 'Sarabun', sans-serif;
+		}
+		
+		.row::after {
+            content: "";
+			clear: both;
+			display: table;
+		}
+		
+		[class*="col-"] {
+			float: left;
+			padding: 15px;
+			
+		}
+
+
+		.footer {
+			padding: 0px;
+			
+		}
+
+		/* For mobile phones: */
+		[class*="col-"] {
+			width: 100%;
+		}
+
+		@media only screen and (min-width: 600px) {
+		  /* For tablets: */
+		  .col-s-1 {width: 8.33%;}
+		  .col-s-2 {width: 16.66%;}
+		  .col-s-3 {width: 25%;}
+		  .col-s-4 {width: 33.33%;}
+		  .col-s-5 {width: 41.66%;}
+		  .col-s-6 {width: 50%;}
+		  .col-s-7 {width: 58.33%;}
+		  .col-s-8 {width: 66.66%;}
+		  .col-s-9 {width: 75%;}
+		  .col-s-10 {width: 83.33%;}
+		  .col-s-11 {width: 91.66%;}
+		  .col-s-12 {width: 100%;}
+		}
+		@media only screen and (min-width: 768px) {
+		  /* For desktop: */
+		  .col-1 {width: 8.33%;}
+		  .col-2 {width: 16.66%;}
+		  .col-3 {width: 25%;}
+		  .col-4 {width: 33.33%;}
+		  .col-5 {width: 41.66%;}
+		  .col-6 {width: 50%;}
+		  .col-7 {width: 58.33%;}
+		  .col-8 {width: 66.66%;}
+		  .col-9 {width: 75%;}
+		  .col-10 {width: 83.33%;}
+		  .col-11 {width: 91.66%;}
+		  .col-12 {width: 100%;}
+		}
+		
+		/* Foto de curriculo ou avatar */
+		#avatar {
+			vertical-align: middle;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+		}
+		
+				
+		/* Alert da W3Schools*/
+		
+	    /* Caixa de mensagem de alerta */
+		.alert {
+		  padding: 10px;
+		  background-color: #12a1f3; /* Azul  */
+		  color: black;
+		  border-radius: 18px;
+		  margin-bottom: 10px;
+		}
+
+		/* Botão para fechar a caixa de alerta */
+		.closebtn {
+		  margin-left: 15px;
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  font-size: 18px;
+		  line-height: 10px;
+		  cursor: pointer;
+		  transition: 0.3s;
+		}
+
+		/* Quando mover o mouse no botão de fechar */
+		.closebtn:hover {
+		  color: black;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="header">
+		<!--Navbar-->
+		<ul class="topnav">
+			<li><a class="active" href="Curriculo.html">Início</a></li>
+			<li><a href="Formacao.html">Formação</a></li>
+			<li><a href="Atividades.html">Cursos e atividades</a></li>
+			<li class="right"><a href="https://www.linkedin.com/in/elianepinaaraujo/">LinkedIn</a></li>
+		</ul>
+
+		<!--Imagem responsiva que acompanha a Navbar-->
+		<div style="padding:0 0px;">
+			<img src="navbar2.png" alt="PixelArt Sky" class="responsiveimg">
+		</div>
+		
+	</div>
+
+
+	<div class="row">
+		<div class="col-4 col-s-12">
+			<center>
+				<img src="profile.jpg" alt="Foto de Perfil" class="imgresponsive" id="avatar">
+			</center>
+		</div>
+		<div class="col-5 col-s-9">
+			<h1>Eliane Pina Araujo</h1>
+			<p><h4><font color="gray">  Tecnóloga em Análise e Desenvolvimento de Sistemas  </font></h4></p>
+			<h3>Dados Pessoais</h3>
+			<p align="justify">23 anos, brasileira, solteira, sem filhos e não fumante<p>
+			<p></p>
+			<h3>Objetivo</h3>
+			<p align="justify">Tecnologia da Informação</p>
+	
+		</div>	
+		<div class="col-2 col-s-12" ></div>
+	</div>
+
+
+	<div class="footer">
+		<div class="col-3 col-s-12"></div>
+		<div class="col-5 col-s-12">
+			<div class="alert">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+				<p align="justify">Olá, seja bem vindo(a)! Este é o meu primeiro modelo de currículo em HTML / CSS. Por motivo de segurança, disponibilizarei como contato apenas o meu perfil no LinkedIn. Obrigada pela visita!</p>
+			</div>
+		</div>
+		<div class="col-3 col-s-12"></div>
+
+	</div>
+
+</body>
+</html>

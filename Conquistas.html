@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Conquistas </title>
+	<link rel="icon" href="sakura.png" type="image/png"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+	<!--link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet"-->
+	<style>
+	    @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC');
+		@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+	
+		body {margin: 0; background-color: #db93ff; font-family: 'Playfair Display', serif; }
+
+		ul.topnav {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #000000;
+		}
+
+		ul.topnav li {float: left;}
+
+		ul.topnav li a {
+			display: block;
+			color: #ffffff;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family: 'Carrois Gothic SC', sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		ul.topnav li a:hover:not(.active) {background-color: #d584ff;}
+
+		ul.topnav li a.active {background-color: #8f0cd1;}
+
+		ul.topnav li.right {float: right;}
+
+		@media screen and (max-width: 600px) {
+			ul.topnav li.right, 
+			ul.topnav li {float: none;}
+		}
+		
+		
+		.responsiveimg {
+			width: 100%;
+			
+			height: auto;
+		}
+		
+		.header {
+			padding: 0px;
+		}
+		
+		html {
+			font-family: 'Sarabun', sans-serif;
+		}
+		
+		.row::after {
+            content: "";
+			clear: both;
+			display: table;
+		}
+		
+		[class*="col-"] {
+			float: left;
+			padding: 15px;
+			
+		}
+
+
+		.footer {
+			padding: 0px;
+			/* background-image: url("img/footer.png"); */
+			
+		}
+
+		/* For mobile phones: */
+		[class*="col-"] {
+			width: 100%;
+		}
+
+		@media only screen and (min-width: 600px) {
+		  /* For tablets: */
+		  .col-s-1 {width: 8.33%;}
+		  .col-s-2 {width: 16.66%;}
+		  .col-s-3 {width: 25%;}
+		  .col-s-4 {width: 33.33%;}
+		  .col-s-5 {width: 41.66%;}
+		  .col-s-6 {width: 50%;}
+		  .col-s-7 {width: 58.33%;}
+		  .col-s-8 {width: 66.66%;}
+		  .col-s-9 {width: 75%;}
+		  .col-s-10 {width: 83.33%;}
+		  .col-s-11 {width: 91.66%;}
+		  .col-s-12 {width: 100%;}
+		}
+		@media only screen and (min-width: 768px) {
+		  /* For desktop: */
+		  .col-1 {width: 8.33%;}
+		  .col-2 {width: 16.66%;}
+		  .col-3 {width: 25%;}
+		  .col-4 {width: 33.33%;}
+		  .col-5 {width: 41.66%;}
+		  .col-6 {width: 50%;}
+		  .col-7 {width: 58.33%;}
+		  .col-8 {width: 66.66%;}
+		  .col-9 {width: 75%;}
+		  .col-10 {width: 83.33%;}
+		  .col-11 {width: 91.66%;}
+		  .col-12 {width: 100%;}
+		}
+		
+	    /*glass image*/
+		* {box-sizing: border-box;}
+
+		.img-magnifier-container {
+			position:relative;
+		}
+
+		.img-magnifier-glass {
+			position: absolute;
+			border: 3px solid #881c96;
+			border-radius: 50%;
+			cursor: none;
+			/*Set the size of the magnifier glass:*/
+			width: 150px;
+			height: 150px;
+		}
+		
+	    /* coração */
+		.heart1{
+			background: -webkit-linear-gradient(#af20fc, #000000);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: 30px;
+		  }  
+		  
+		 .heart1:hover{
+			-webkit-radial-gradient(50% 100% circle, #ff84e0 4%, #c183ff 30%, #83b6ff 62%, #83ffec 85%, #fffc83);
+			background: radial-gradient(circle at 50% 100%, #ffadf1 30%, #ade5ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;    
+		}
+			
+	</style>
+	<script>
+function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  /*create magnifier glass:*/
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+  /*insert magnifier glass:*/
+  img.parentElement.insertBefore(glass, img);
+  /*set background properties for the magnifier glass:*/
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+  /*execute a function when someone moves the magnifier glass over the image:*/
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /*prevent the magnifier glass from being positioned outside the image:*/
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /*set the position of the magnifier glass:*/
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /*display what the magnifier glass "sees":*/
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+
+</head>
+<body>
+	<div class="header">
+		<ul class="topnav">
+			<li><a href="Inicio.html">Início</a></li>
+			<li><a href="Etec.html">Etec</a></li>
+			<li><a href="Fatec.html">Fatec</a></li>
+			<li><a class="active" href="Conquistas.html">Conquistas</a></li>
+			<li><a href="Outras.html">Outras atividades</a></li>
+			<li class="right"><a href="https://github.com/elianepina">GitHub</a></li>
+		</ul>
+
+		<div style="padding:0 0px;">
+			<img src="blacklace.png" alt="PixelArt Sky" class="responsiveimg">
+		</div>
+		
+	</div>
+
+
+	<div class="row">
+		<div class="col-1 col-s-12">
+		</div>
+		<div class="col-6 col-s-12">
+			<h1><i class="fas fa-heart heart1" aria-hidden="true"></i> Conquistas</h1>
+		
+				<p align="justify"><h3>2013: Intercâmbio Cultural Centro Paula Souza</h3></p>
+				<p align="justify"> No primeiro semestre de 2013, eu fui a aluna da Etec de Mauá que foi convocada a participar do Intercâmbio Cultural do Centro Paula Souza. </p>
+				<p align="justify"> O Centro Paula Souza convoca o aluno com maior aproveitamento escolar - maiores notas e menos faltas - de cada Etec e Fatec do estado de São Paulo e este viaja para o exterior para estudar por um mês.</p>
+				<p align="justify"> Eu viajei para Boston, Massachussets, nos Estados Unidos. Estudei na FLS International Boston Commons, que fica na frente do conhecido parque central Boston Common e próxima a Massachussets State House - Casa de Estado de Massachussets.</p>
+				<p align="justify"> Nesta experiência, estudei com alunos de várias nacionalidades. Na época o meu inglês para conversação era básico, mas o meu nível para escrita e leitura era intermediário e então, eu fiquei em uma turma de inglês intermadiário. </p>
+				<p align="justify"> Tive uma boa experiência com as pessoas que vivem ali, com os professores, funcionários da escola e com os outros alunos.</p>
+				<p align="justify"> Após o intercâmbio, eu passei a estudar inglês de forma autodidática com maior facilidade.</p>	
+			    <p></p>
+		</div>	
+
+		<div class="col-4 col-s-12" style="padding: 80px 20px;">
+			    <div class="img-magnifier-container">
+					<img id="myimage" src="statehouse.jpg" alt="Boston, MA" class="responsiveimg" width="450" height="300">
+				</div>			
+				<p><center><h4><i>Massachussets State House</i></h4></center></p>
+	    </div>	
+	</div>
+
+
+	<div class="footer">
+	</div>
+
+	<script>
+	/* Initiate Magnify Function
+	with the id of the image, and the strength of the magnifier glass:*/
+	magnify("myimage", 3);
+	</script>
+</body>
+</html>
